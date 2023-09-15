@@ -3,7 +3,6 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
-
 }
 
 android {
@@ -100,11 +99,15 @@ dependencies {
     implementation("com.google.accompanist:accompanist-coil:0.7.0")
 
     //Dagger - Hilt
-    implementation("com.google.dagger:hilt-android:2.44")
+    implementation("com.google.dagger:dagger:2.44.2")
+    ksp("com.google.dagger:dagger-compiler:2.44.2")
+
+    implementation("com.google.dagger:hilt-android:2.44.2")
     implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
-    ksp("com.google.dagger:hilt-android-compiler:2.33-beta")
     ksp("androidx.hilt:hilt-compiler:1.1.0-alpha01")
+    ksp("com.google.dagger:hilt-android-compiler:2.44.2")
+
 
     implementation("androidx.palette:palette-ktx:1.0.0")
 }
