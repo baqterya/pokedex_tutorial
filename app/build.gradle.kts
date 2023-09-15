@@ -101,10 +101,10 @@ dependencies {
 
     //Dagger - Hilt
     implementation("com.google.dagger:hilt-android:2.44")
-    ksp("com.google.dagger:hilt-android-compiler:2.33-beta")
     implementation("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
-    ksp("androidx.hilt:hilt-compiler:1.1.0-alpha01")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
+    ksp("com.google.dagger:hilt-android-compiler:2.33-beta")
+    ksp("androidx.hilt:hilt-compiler:1.1.0-alpha01")
 
     implementation("androidx.palette:palette-ktx:1.0.0")
 }
