@@ -21,6 +21,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.Button
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment.Companion.Center
@@ -35,6 +36,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -42,6 +44,7 @@ import androidx.navigation.NavController
 import coil.compose.SubcomposeAsyncImage
 import com.example.pokedex_tutorial.R
 import com.example.pokedex_tutorial.data.models.PokedexListEntry
+import com.example.pokedex_tutorial.ui.theme.RobotoCondensed
 
 @Composable
 fun PokemonListScreen(
@@ -202,6 +205,13 @@ fun PokedexEntry(
                         modifier = Modifier.scale(0.5f)
                     )
                 }
+            )
+            Text(
+                text = entry.pokemonName,
+                fontFamily = RobotoCondensed,
+                fontSize = 20.sp,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
             )
         }
     }
